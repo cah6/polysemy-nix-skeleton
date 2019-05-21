@@ -1,0 +1,30 @@
+name:                polysemy-nix-skeleton
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable polysemy-nix-skeleton
+  main-is:             Main.hs
+  build-depends:      base >=4.9
+                    , polysemy
+                    , polysemy-plugin
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options: -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
+  default-extensions:
+    BlockArguments
+    DataKinds
+    DeriveFunctor
+    FlexibleContexts
+    GADTs
+    LambdaCase
+    PolyKinds
+    RankNTypes
+    ScopedTypeVariables
+    StandaloneDeriving
+    TypeApplications
+    TypeOperators
+    TypeFamilies
